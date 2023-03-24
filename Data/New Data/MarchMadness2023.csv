@@ -1,0 +1,100 @@
+DATE,TYPE,TEAM,CONF.,OPP.,VENUE,RESULT,ADJ. O,ADJ. D,TO%,REB%,EFG%,TO%,REB%
+3/22/2023,Post Season Tournament,Charlotte,CUSA,Eastern Kentucky,N,"W, 71-68",131.9,108.8,17.2,11.8,57.4,17.2,28.6
+3/22/2023,Post Season Tournament,Eastern Kentucky,ASun,Charlotte,N,"L, 71-68",111.9,125.8,17.2,28.6,75.6,17.2,11.8
+3/22/2023,Post Season Tournament,Utah Valley,WAC,Cincinnati,H,"W, 74-68",108.7,87,19.2,33.3,38,11,34
+3/22/2023,Post Season Tournament,Cincinnati,Amer,Utah Valley,A,"L, 74-68",103.1,98.6,11,34,50,19.2,33.3
+3/22/2023,Post Season Tournament,UAB,CUSA,Vanderbilt,A,"W, 67-59",102.7,84,15.3,40,38.7,13.8,41.5
+3/22/2023,Post Season Tournament,Vanderbilt,SEC,UAB,H,"L, 67-59",99.1,93.8,13.8,41.5,39.1,15.3,40
+3/21/2023,Post Season Tournament,Southern Utah,WAC,Eastern Kentucky,N,"L, 108-106",114.8,112.8,23.3,28.9,54.6,9.5,31.9
+3/21/2023,Post Season Tournament,Eastern Kentucky,ASun,Southern Utah,N,"W, 108-106",114.1,108.5,9.5,31.9,58.2,23.3,28.9
+3/21/2023,Post Season Tournament,North Texas,CUSA,Oklahoma St.,A,"W, 65-59",111,86.5,18,35.1,36.1,16.5,44.4
+3/21/2023,Post Season Tournament,Charlotte,CUSA,Radford,N,"W, 63-56",106.1,93.3,16.7,16,42.9,15,31.6
+3/21/2023,Post Season Tournament,Wisconsin,B10,Oregon,A,"W, 61-58",101.1,83.2,15.5,32.6,49.1,14,16.7
+3/21/2023,Post Season Tournament,Oregon,P12,Wisconsin,H,"L, 61-58",99.7,92.2,14,16.7,38.9,15.5,32.6
+3/21/2023,Post Season Tournament,Oklahoma St.,B12,North Texas,H,"L, 65-59",97.8,92.8,16.5,44.4,42.3,18,35.1
+3/21/2023,Post Season Tournament,Radford,BSth,Charlotte,N,"L, 63-56",95.1,102.1,15,31.6,53.5,16.7,16
+3/20/2023,Post Season Tournament,Eastern Kentucky,ASun,Indiana St.,N,"W, 89-88",112.9,104.3,13.7,22.9,60.8,22.3,17.2
+3/20/2023,Post Season Tournament,Southern Utah,WAC,Rice,N,"W, 81-79",111.5,102.7,18.2,30.3,40.1,7,39.6
+3/20/2023,Post Season Tournament,Indiana St.,MVC,Eastern Kentucky,N,"L, 89-88",111,109.7,22.3,17.2,55.8,13.7,22.9
+3/20/2023,Post Season Tournament,Charlotte,CUSA,Milwaukee,N,"W, 76-65",110.3,97.6,13.3,21.2,50.9,29.5,37.9
+3/20/2023,Post Season Tournament,Radford,BSth,San Jose St.,N,"W, 67-57",107.7,92.6,9.8,36.8,42.9,19.5,29.7
+3/20/2023,Post Season Tournament,Rice,CUSA,Southern Utah,N,"L, 81-79",106.2,113.1,7,39.6,60.8,18.2,30.3
+3/20/2023,Post Season Tournament,Milwaukee,Horz,Charlotte,N,"L, 76-65",97.3,109.5,29.5,37.9,57.8,13.3,21.2
+3/20/2023,Post Season Tournament,San Jose St.,MWC,Radford,N,"L, 67-57",96.9,105.6,19.5,29.7,46.2,9.8,36.8
+3/19/2023,Post Season Tournament,North Texas,CUSA,Sam Houston St.,H,"W, 75-55",134.4,87.6,17.7,12,44,14.5,25.6
+3/19/2023,Post Season Tournament,Miami FL,ACC,Indiana,N,"W, 85-69",130,94.2,17.4,51.3,47.6,17.4,30
+3/19/2023,Post Season Tournament,Creighton,BE,Baylor,N,"W, 85-76",127.1,90.8,19.9,35.7,50,14.2,31.4
+3/19/2023,Post Season Tournament,Utah Valley,WAC,Colorado,A,"W, 81-69",125.3,98.1,18.6,19.2,50,17.1,25
+3/19/2023,Post Season Tournament,Liberty,ASun,Wisconsin,A,"L, 75-71",124.4,110.2,10.8,15.6,55,10.8,16.7
+3/19/2023,Post Season Tournament,Connecticut,BE,Saint Mary's,N,"W, 70-55",123.3,85.9,22.3,20.8,42.9,14.4,12.9
+3/19/2023,Post Season Tournament,Rice,CUSA,Duquesne,N,"W, 84-78",122.5,109.9,15.9,29.6,53.2,20.3,36.1
+3/19/2023,Post Season Tournament,Wisconsin,B10,Liberty,H,"W, 75-71",120.9,105.5,10.8,16.7,54.5,10.8,15.6
+3/19/2023,Post Season Tournament,UAB,CUSA,Morehead St.,H,"W, 77-59",119.6,94.2,9.3,32.4,42.7,9.3,17.5
+3/19/2023,Post Season Tournament,Baylor,B12,Creighton,N,"L, 85-76",118.9,111.5,14.2,31.4,57.3,19.9,35.7
+3/19/2023,Post Season Tournament,Gonzaga,WCC,TCU,N,"W, 84-81",118.9,99.7,14.3,31.6,51.5,11.7,24.4
+3/19/2023,Post Season Tournament,Kentucky,SEC,Kansas St.,N,"L, 75-69",115.9,100.2,23.4,47.5,52.8,11.7,13.3
+3/19/2023,Post Season Tournament,Kansas St.,B12,Kentucky,N,"W, 75-69",113.8,93.4,11.7,13.3,44.4,23.4,47.5
+3/19/2023,Post Season Tournament,Xavier,BE,Pittsburgh,N,"W, 84-73",113.7,84.6,10.3,18.4,42.9,11.6,21.3
+3/19/2023,Post Season Tournament,Eastern Kentucky,ASun,Cleveland St.,N,"W, 91-75",113.2,104.8,17.1,51.3,45.7,13.1,25
+3/19/2023,Post Season Tournament,TCU,B12,Gonzaga,N,"L, 84-81",112.3,90.4,11.7,24.4,50.7,14.3,31.6
+3/19/2023,Post Season Tournament,Michigan St.,B10,Marquette,N,"W, 69-60",111,79.6,19.5,31.2,49,24,25.7
+3/19/2023,Post Season Tournament,Colorado,P12,Utah Valley,H,"L, 81-69",110.4,110.9,17.1,25,63.6,18.6,19.2
+3/19/2023,Post Season Tournament,Duquesne,A10,Rice,N,"L, 84-78",107.3,117.8,20.3,36.1,61.6,15.9,29.6
+3/19/2023,Post Season Tournament,Cleveland St.,Horz,Eastern Kentucky,N,"L, 91-75",106.1,112.9,13.1,25,54,17.1,51.3
+3/19/2023,Post Season Tournament,Radford,BSth,Tarleton St.,N,"W, 72-70",106.1,103.5,27.5,30.8,49.1,21.7,37.9
+3/19/2023,Post Season Tournament,Fairleigh Dickinson,NEC,Florida Atlantic,N,"L, 78-70",105.8,98.5,15.1,28.9,47.2,9.6,32.6
+3/19/2023,Post Season Tournament,Indiana,B10,Miami FL,N,"L, 85-69",105.7,106.7,17.4,30,55,17.4,51.3
+3/19/2023,Post Season Tournament,Tarleton St.,WAC,Radford,N,"L, 72-70",103.6,102.8,21.7,37.9,60.2,27.5,30.8
+3/19/2023,Post Season Tournament,Saint Mary's,WCC,Connecticut,N,"L, 70-55",103.1,92.3,14.4,12.9,64,22.3,20.8
+3/19/2023,Post Season Tournament,Oregon,P12,UCF,H,"W, 68-54",101.2,73.6,25,19.2,34.7,18.1,22.2
+3/19/2023,Post Season Tournament,Eastern Washington,BSky,Oklahoma St.,A,"L, 71-60",100.1,99.2,18.9,21.1,58.3,27.6,25.8
+3/19/2023,Post Season Tournament,Stetson,ASun,Milwaukee,N,"L, 87-83",99.6,106.4,18.2,41.2,43,10.9,25
+3/19/2023,Post Season Tournament,Oklahoma St.,B12,Eastern Washington,H,"W, 71-60",99.1,83.7,27.6,25.8,46.5,18.9,21.1
+3/19/2023,Post Season Tournament,Marquette,BE,Michigan St.,N,"L, 69-60",99.1,94.5,24,25.7,46.3,19.5,31.2
+3/19/2023,Post Season Tournament,Morehead St.,OVC,UAB,A,"L, 77-59",97.8,110.1,9.3,17.5,53.8,9.3,32.4
+3/19/2023,Post Season Tournament,Pittsburgh,ACC,Xavier,N,"L, 84-73",97.2,97.8,11.6,21.3,54,10.3,18.4
+3/19/2023,Post Season Tournament,Sam Houston St.,WAC,North Texas,A,"L, 75-55",96.9,114.3,14.5,25.6,68,17.7,12
+3/19/2023,Post Season Tournament,Florida Atlantic,CUSA,Fairleigh Dickinson,N,"W, 78-70",96.5,95.3,9.6,32.6,44.4,15.1,28.9
+3/19/2023,Post Season Tournament,Milwaukee,Horz,Stetson,N,"W, 87-83",96.2,95.6,10.9,25,41.6,18.2,41.2
+3/19/2023,Post Season Tournament,UCF,Amer,Oregon,A,"L, 68-54",81.8,85.5,18.1,22.2,54.3,25,19.2
+3/18/2023,Post Season Tournament,Houston,Amer,Auburn,N,"W, 81-64",130.7,97.6,10.9,44.7,42.5,12.4,31.7
+3/18/2023,Post Season Tournament,UCLA,P12,Northwestern,N,"W, 68-63",129.2,98.4,13.4,13,42.4,13.4,35.9
+3/18/2023,Post Season Tournament,Auburn,SEC,Houston,N,"L, 81-64",123.5,105.1,12.4,31.7,47.5,10.9,44.7
+3/18/2023,Post Season Tournament,Princeton,Ivy,Missouri,N,"W, 78-63",123.5,89.4,14.3,42.1,45.9,11.2,22.2
+3/18/2023,Post Season Tournament,Northwestern,B10,UCLA,N,"L, 68-63",122.5,105.2,13.4,35.9,56.8,13.4,13
+3/18/2023,Post Season Tournament,Kansas,B12,Arkansas,N,"L, 72-71",122.2,98.4,18,25,44,16.5,40.5
+3/18/2023,Post Season Tournament,Arkansas,SEC,Kansas,N,"W, 72-71",119.5,99.4,16.5,40.5,53,18,25
+3/18/2023,Post Season Tournament,Cincinnati,Amer,Hofstra,A,"W, 79-65",116.9,87.6,21.3,40.7,43,15.6,26.2
+3/18/2023,Post Season Tournament,Tennessee,SEC,Duke,N,"W, 65-52",115.9,82,14.8,33.3,49,24.7,20.7
+3/18/2023,Post Season Tournament,Penn St.,B10,Texas,N,"L, 71-66",115.8,100.3,14,23.7,51.6,7.8,25
+3/18/2023,Post Season Tournament,San Diego St.,MWC,Furman,N,"W, 75-52",115.4,78.8,15.8,34.5,38,14.3,16.2
+3/18/2023,Post Season Tournament,Texas,B12,Penn St.,N,"W, 71-66",115,90.3,7.8,25,48.3,14,23.7
+3/18/2023,Post Season Tournament,San Jose St.,MWC,Southern Indiana,N,"W, 77-52",112.7,86.8,14.3,51.4,42.3,14.3,20
+3/18/2023,Post Season Tournament,Alabama,SEC,Maryland,N,"W, 73-51",112.4,75.1,16.4,40.5,36.1,19.4,25.6
+3/18/2023,Post Season Tournament,Duke,ACC,Tennessee,N,"L, 65-52",106.4,96.8,24.7,20.7,48.2,14.8,33.3
+3/18/2023,Post Season Tournament,Missouri,SEC,Princeton,N,"L, 78-63",104.5,118.8,11.2,22.2,53.2,14.3,42.1
+3/18/2023,Post Season Tournament,Vanderbilt,SEC,Michigan,H,"W, 66-65",104.3,93.4,10.5,12.1,46.2,22.6,36.7
+3/18/2023,Post Season Tournament,Michigan,B10,Vanderbilt,A,"L, 66-65",101.7,88.6,22.6,36.7,48.3,10.5,12.1
+3/18/2023,Post Season Tournament,Furman,SC,San Diego St.,N,"L, 75-52",99.4,108.3,14.3,16.2,55.2,15.8,34.5
+3/18/2023,Post Season Tournament,Hofstra,CAA,Cincinnati,H,"L, 79-65",98.9,104.7,15.6,26.2,56.1,21.3,40.7
+3/18/2023,Post Season Tournament,Western Carolina,SC,Charlotte,N,"L, 65-56",97.8,95.8,16.1,15.6,46.2,11.3,15.6
+3/18/2023,Post Season Tournament,Charlotte,CUSA,Western Carolina,N,"W, 65-56",96.3,98.4,11.3,15.6,50,16.1,15.6
+3/18/2023,Post Season Tournament,Indiana St.,MVC,USC Upstate,N,"W, 67-62",95.5,96,21.7,16.1,41.3,10.1,26.7
+3/18/2023,Post Season Tournament,Maryland,B10,Alabama,N,"L, 73-51",95.3,92.1,19.4,25.6,44.8,16.4,40.5
+3/18/2023,Post Season Tournament,USC Upstate,BSth,Indiana St.,N,"L, 67-62",92.7,91.2,10.1,26.7,52.7,21.7,16.1
+3/18/2023,Post Season Tournament,Southern Indiana,OVC,San Jose St.,N,"L, 77-52",86.4,116.2,14.3,20,50,14.3,51.4
+3/18/2023,Post Season Tournament,Southern Utah,WAC,North Alabama,N,"W, 72-50",83.2,74.9,13.2,23.4,35.1,21.1,22
+3/18/2023,Post Season Tournament,North Alabama,ASun,Southern Utah,N,"L, 72-50",74.3,83.8,21.1,22,44.2,13.2,23.4
+3/17/2023,Post Season Tournament,Connecticut,BE,Iona,N,"W, 87-63",133,97.5,13.7,38.9,44.7,9.1,18.4
+3/17/2023,Post Season Tournament,Marquette,BE,Vermont,N,"W, 78-61",124,93.5,7.9,16.7,50.9,15.9,16.1
+3/17/2023,Post Season Tournament,Florida Atlantic,CUSA,Memphis,N,"W, 66-65",120.4,97.8,15,43.9,48.3,13.3,38.2
+3/17/2023,Post Season Tournament,Indiana,B10,Kent St.,N,"W, 71-60",119,90,10.9,30.3,37,14,39.6
+3/17/2023,Post Season Tournament,Memphis,Amer,Florida Atlantic,N,"L, 66-65",118.4,101.5,13.3,38.2,44.6,15,43.9
+3/17/2023,Post Season Tournament,Michigan St.,B10,USC,N,"W, 72-62",118.2,89.4,10.8,22.2,47.4,17,23.5
+3/17/2023,Post Season Tournament,Gonzaga,WCC,Grand Canyon,N,"W, 82-70",118,97.6,17.7,35.7,50,10.3,19.4
+3/17/2023,Post Season Tournament,Arizona St.,P12,TCU,N,"L, 72-70",117.1,99.1,19.5,20,41.9,7.5,33.3
+3/17/2023,Post Season Tournament,TCU,B12,Arizona St.,N,"W, 72-70",116.8,102.2,7.5,33.3,55.8,19.5,20
+3/17/2023,Post Season Tournament,Kansas St.,B12,Montana St.,N,"W, 77-65",116.6,93.6,20.2,24,51.9,23.1,25.8
+3/17/2023,Post Season Tournament,Iona,MAAC,Connecticut,N,"L, 87-63",114.8,108.4,9.1,18.4,56.8,13.7,38.9
+3/17/2023,Post Season Tournament,Baylor,B12,UC Santa Barbara,N,"W, 74-56",112.7,90.4,14.5,26.9,51,22.6,15.4
+3/17/2023,Post Season Tournament,Grand Canyon,WAC,Gonzaga,N,"L, 82-70",109.6,100.5,10.3,19.4,59.8,17.7,35.7

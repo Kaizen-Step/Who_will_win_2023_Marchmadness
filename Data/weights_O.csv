@@ -1,0 +1,19 @@
+parameters,sensitivity
+Adjusted Offensive Efficiency,0.33223847
+Effective Field Goal Percentage Shot,0.01555344
+Free Throw Rate (How often the given team shoots Free Throws),0.11359023
+Offensive Rebound Rate,0.11563807
+Three-Point Shooting Percentage,-0.00592496
+Turnover Percentage Committed (Steal Rate),-0.21185927
+Two-Point Shooting Percentage,-0.03232874
+Win Rate,0.95091635
+Wins Above Bubble,-0.69714445
+ADJ_T,0.33223847
+ADJDE,0.01555344
+EFG_D,-0.21185927
+TOR,0.11563807
+DRB,0.11359023
+FTRD,-0.03232874
+2P_D,-0.00592496
+3P_D,-0.69714445
+Barthag,0.95091635
