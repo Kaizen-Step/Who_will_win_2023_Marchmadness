@@ -9,7 +9,7 @@ from PIL import Image
 theme_plotly = None  # None or streamlit
 
 # Layout
-st.set_page_config(page_title=' Model - NCAA_Basketball',
+st.set_page_config(page_title=' Model - Who Will Win 2023 March Madness',
                    page_icon=':bar_chart:📈', layout='wide')
 st.title('🌌 Optimized Model')
 
@@ -81,14 +81,15 @@ Win_Rate1 and Win_Rate2 are representations of the number of victories divided b
 
 st.info(""" ##### Using a Larger Dataset (two consecutive seasons data) ####    
 
-    In the previous project, only the 2023 regular season dataset was used to train the model; however, in this project the data of the previous season (both regular season and playoff) was used. 
-    Two criteria was used:
-    * Use the 2021-22 data to pre-train the model, then, load the weights as initial values and then train the model again with the current season data
+    The data from the prior season (both regular season and playoff) was used in this project, as opposed to the previous project, which only used the 2023 regular season dataset to train the model.   
+    Two criteria were utilized.:
+    
     * Concatenate all the data and train the model on the larger dataset altogether
+    * Use the 2021-22 data to pre-train the model, then, load the weights as initial values and then train the model again with the current season data
 
-    The result showed that the second option works better, therefore, the model is trained by using all the games of the previous and current season as a whole dataset.
+    The result showed that the second option works better, therefore, the model is trained by using all the games of current season as a whole dataset.
 
-    The interesting result is that the accuracy on the test dataset increased by more than half percent by training the model on the larger dataset. The accuracy increased from 76.66 to 77.18 percent. The final accuracy on the test set is just below 80 percent, which looks quite satisfying.
+    The interesting result is that the accuracy on the test dataset increased by more than half percent by training the model on this approach. The accuracy increased from 76.66 to 78.18 percent. The final accuracy on the test set is just below 80 percent, which looks quite satisfying.
     
     """)
 
