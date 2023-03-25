@@ -10,7 +10,7 @@ theme_plotly = None  # None or streamlit
 
 
 # Layout
-st.set_page_config(page_title='Data Collecting - NCAA_Basketball',
+st.set_page_config(page_title='Data Collecting - Who Will Win 2023 March Madness',
                    page_icon=':bar_chart:📈', layout='wide')
 st.title('💾 Data Collecting')
 
@@ -115,6 +115,7 @@ st.info(""" #### Summary: ####
 
 
 * 1131 match result which all held in 2022-2023 scraped from Battrovik site and put in kaggle for public usage
+* Past two season game results were extracted and classified as tournament and non-tournament matches
 * all attribute and statistics of 363 teams and players invovled in NCAA devision scraped from Battrovik site and gathered in one table
 * for further exploration features in Kenpom ranking site also scrape and added to data set
 

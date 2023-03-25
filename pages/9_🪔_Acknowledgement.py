@@ -13,7 +13,7 @@ week_days = ['Monday', 'Tuesday', 'Wednesday',
              'Thursday', 'Friday', 'Saturday', 'Sunday']
 
 # Layout
-st.set_page_config(page_title='Aknowledgement - Insight of the Week',
+st.set_page_config(page_title='Aknowledgement - Who Will Win 2023 March Madness',
                    page_icon=':bar_chart:', layout='wide')
 st.title('🪔 References')
 

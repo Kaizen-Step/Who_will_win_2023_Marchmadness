@@ -15,7 +15,7 @@ theme_plotly = None  # None or streamlit
 
 
 # Layout
-st.set_page_config(page_title=' Match Prediction Application -  NCAA_Basketball',
+st.set_page_config(page_title=' Match Prediction Application -  Who Will Win 2023 March Madness',
                    page_icon=':bar_chart:📈', layout='wide')
 st.title('🔮 Match Prediction Application')
 
@@ -359,9 +359,6 @@ def convert_team_names_proper_input_x(team1_name, team2_name, venue='Home'):
     x_input_df['2P%D1'] = x_input_df['2P%D1'].replace([team_name for team_name in team_stats_2023['TEAM']], [
                                                       two_pd for two_pd in team_stats_2023['2P%D']])
 
-    x_input_df['2P%1'] = x_input_df['2P%1'].replace(
-        [team_name for team_name in team_stats_2023['TEAM']], [drb for drb in team_stats_2023['2P%']])
-
     x_input_df['3P%1'] = x_input_df['3P%1'].replace([team_name for team_name in team_stats_2023['TEAM']], [
                                                     three_p for three_p in team_stats_2023['3P%']])
 
@@ -424,9 +421,6 @@ def convert_team_names_proper_input_x(team1_name, team2_name, venue='Home'):
     x_input_df['2P%D2'] = x_input_df['2P%D2'].replace([team_name for team_name in team_stats_2023['TEAM']], [
                                                       two_pd for two_pd in team_stats_2023['2P%D']])
 
-    x_input_df['2P%2'] = x_input_df['2P%2'].replace(
-        [team_name for team_name in team_stats_2023['TEAM']], [drb for drb in team_stats_2023['2P%']])
-
     x_input_df['3P%2'] = x_input_df['3P%2'].replace([team_name for team_name in team_stats_2023['TEAM']], [
                                                     three_p for three_p in team_stats_2023['3P%']])
 
@@ -445,14 +439,22 @@ def convert_team_names_proper_input_x(team1_name, team2_name, venue='Home'):
     x_input_df['Venue_Neutral'] = [int(venue == 'Neutral')]
 
     # Team Names Must Be Removed
+
     # x_input_df = x_input_df.drop(['TEAM1', 'TEAM2'], axis=1)
-    x_input_df = x_input_df.drop(['TEAM1', 'TEAM2',
-                                  'ADJOE1', 'ADJDE1', 'BARTHAG1', 'EFG%1', 'EFGD%1', 'TOR1', 'TORD1', 'ORB1', 'DRB1', 'FTR1', 'FTRD1',
-                                  'ADJOE2', 'ADJDE2', 'BARTHAG2', 'EFG%2', 'EFGD%2', 'TOR2', 'TORD2', 'ORB2', 'DRB2', 'FTR2', 'FTRD2',
-                                  ], axis=1)
+
+    # x_input_df = x_input_df.drop(['TEAM1', 'TEAM2',
+    #                               'ADJOE1', 'ADJDE1', 'BARTHAG1', 'EFG%1', 'EFGD%1', 'TOR1', 'TORD1', 'ORB1', 'DRB1', 'FTR1', 'FTRD1',
+    #                               'ADJOE2', 'ADJDE2', 'BARTHAG2', 'EFG%2', 'EFGD%2', 'TOR2', 'TORD2', 'ORB2', 'DRB2', 'FTR2', 'FTRD2',
+    #                               ], axis=1)
+
+    x_input_df = x_input_df[
+        ['Win_Rate1', 'ORB1', 'ADJOE1', 'BARTHAG1', 'TOR1', 'ADJDE1',
+         'Win_Rate2', 'ORB2', 'ADJOE2', 'BARTHAG2', 'TOR2', 'ADJDE2',
+         'Venue_Home', 'Venue_Away', 'Venue_Neutral']
+    ]
 
     # Load mean and std values for prediction purposes
-    with open('Data/Prediction/Model History/mean_std_vals', 'rb') as file_stat:
+    with open('Data/Prediction/Model History_concat_data/mean_std_vals', 'rb') as file_stat:
         dataset_stats = pickle.load(file_stat)
 
     # Normalize
@@ -475,7 +477,7 @@ def load_model(input_shape):
 
     model.summary()
 
-    checkpoint_path = "Data/Prediction/Model History/cp.ckpt"
+    checkpoint_path = "Data/Prediction/Model History_concat_data/cp.ckpt"
 
     model.load_weights(checkpoint_path)
 
@@ -499,16 +501,25 @@ def predict(team1, team2, venue='Home'):
     basketball_data = pd.read_csv('Data/Prediction/generated_df.csv')
 
     # X = basketball_data.drop(['Match_Result', 'TEAM1', 'TEAM2'], axis=1)
-    X = basketball_data.drop(['Match_Result', 'TEAM1', 'TEAM2',
-                              'ADJOE1', 'ADJDE1', 'BARTHAG1', 'EFG%1', 'EFGD%1', 'TOR1', 'TORD1', 'ORB1', 'DRB1', 'FTR1', 'FTRD1',
-                              'ADJOE2', 'ADJDE2', 'BARTHAG2', 'EFG%2', 'EFGD%2', 'TOR2', 'TORD2', 'ORB2', 'DRB2', 'FTR2', 'FTRD2',
-                              ], axis=1)
+
+    # X = basketball_data.drop(['Match_Result', 'TEAM1', 'TEAM2',
+    #                           'ADJOE1', 'ADJDE1', 'BARTHAG1', 'EFG%1', 'EFGD%1', 'TOR1', 'TORD1', 'ORB1', 'DRB1', 'FTR1', 'FTRD1',
+    #                           'ADJOE2', 'ADJDE2', 'BARTHAG2', 'EFG%2', 'EFGD%2', 'TOR2', 'TORD2', 'ORB2', 'DRB2', 'FTR2', 'FTRD2',
+    #                           ], axis=1)
+
+    X = basketball_data[
+        ['Win_Rate1', 'ORB1', 'ADJOE1', 'BARTHAG1', 'TOR1', 'ADJDE1',
+         'Win_Rate2', 'ORB2', 'ADJOE2', 'BARTHAG2', 'TOR2', 'ADJDE2',
+         'Venue_Home', 'Venue_Away', 'Venue_Neutral']
+    ]
 
     model = load_model(input_shape=(X.shape[1], ))
     # print(abs(model.weights[0][:, 0]))
 
     # Create x input (Venue should be one of these: 'Home', 'Away', 'Neutral')
     x_input_df = convert_team_names_proper_input_x(team1, team2, venue)
+
+    print(x_input_df)
 
     prediction = model.predict(x_input_df)
 

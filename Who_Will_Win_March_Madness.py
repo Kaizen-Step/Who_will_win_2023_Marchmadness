@@ -3,7 +3,7 @@ import streamlit as st
 from PIL import Image
 
 # Layout
-st.set_page_config(page_title=' NCAA Basketball',
+st.set_page_config(page_title=' Who Will Win 2023 March Madness',
                    page_icon=':bar_chart:📈', layout='wide')
 st.title(' Who Will Win 2023 March Madness? 🏀')
 st.text(" \n")
@@ -43,9 +43,9 @@ n supervised learning, the machine is taught by example. The operator provides t
 
 st.write("""
 ## Methodology ##   
-March Madness is one of the most exciting times of the year for college basketball fans. Every year, millions of people try to predict the winner of the NCAA tournament, but the truth is that it's extremely difficult to do so accurately. With the help of machine learning algorithms, it's possible to analyze vast amounts of data and make more informed predictions. In order to do this, we gathered match results for 2022–2023 as well as data from previous seasons. All of the match result data used in this dashboard was scraped from the [NCAA](https://www.ncaa.org), [Barttorvik](https://barttorvik.com) and [Kepnom](https://kenpom.com) sites combined into a single data set, and shared with the public on [Kaggle-kaizenstep-ncaa-games-results](https://www.kaggle.com/datasets/kaizenstep/ncaa-2023-all-games-results).
+March Madness is one of the most exciting times of the year for college basketball fans. Every year, millions of people try to predict the winner of the NCAA tournament, but the truth is that it's extremely difficult to do so accurately. With the help of machine learning algorithms, it's possible to analyze vast amounts of data and make more informed predictions. In order to do this, we gathered match results for 2022–2023 as well as data from previous seasons. All of the match result data used in this dashboard was scraped from the [NCAA](https://www.ncaa.org), [Barttorvik](https://barttorvik.com) and [Kepnom](https://kenpom.com) sites which combined into a single data set, and shared with the public on [Kaggle-kaizenstep-ncaa-games-results](https://www.kaggle.com/datasets/kaizenstep/ncaa-2023-all-games-results).
 One of the most important factors in predicting the winner of March Madness is analyzing the teams' performances. This can include their records throughout the season, their strength of schedule, and win rate. However, this is just the tip of the iceberg when it comes to the types of data that can be analysed, as we gathered 18 individual variables that might have influenced the match winner from Barttorvik and Kepnom sites. then run these 18 variables through a sensivity analysis to determine the most effective variables. These effective variables were used to develop a prediction model that could forecast a team's chances of winning by picking its opponents and playing in venue situation.
- In order to increase the precision of the prediction model for the match results in 2023, weights generated from models built with the previous tournament data were used as initial weights for the 2023 model. The user-interactive application provided can instantly predict a team's chances of winning in the present in real time. Finally, the game for March Madness 2023 was predicted all the way to the championship, and the winning team was shown on the bracket. Each variable used in this dashboard has a definition and formula in the provided glossary section.
+ In order to increase the precision of the prediction model for the match results in 2023, weights generated from models built with the previous tournament data were used as initial weights for the 2023 model. The user-interactive application provided can instantly predict a team's chances of winning in real time. Finally, the game for March Madness 2023 was predicted all the way to the championship, and the winning team was shown on the bracket. A glossary section is provided that contains the definition and formula of each variable and the statistics used in this dashboard.
 """)
 
 
@@ -70,6 +70,6 @@ with c1:
 
 with c2:
     st.info(
-        '**Project Github:  [NCAA Basketball](https://github.com/Kaizen-Step/NCAA_Basketball)**', icon="💻")
+        '**Project Github:  [Who Will Win 2023 March Madness](https://github.com/Kaizen-Step/Who_will_win_2023_Marchmadness)**', icon="💻")
     st.info(
         '**Data Set (2):  [Barttorvik](https://barttorvik.com/trank.php#)**', icon="🧠")

@@ -13,7 +13,7 @@ week_days = ['Monday', 'Tuesday', 'Wednesday',
              'Thursday', 'Friday', 'Saturday', 'Sunday']
 
 # Layout
-st.set_page_config(page_title='Cinderella stories - NCAA Basketball',
+st.set_page_config(page_title='Champion - Who Will Win 2023 March Madness',
                    page_icon=':bar_chart:', layout='wide')
 st.title('🏆 Who Will Win March Madness 2023')
 
