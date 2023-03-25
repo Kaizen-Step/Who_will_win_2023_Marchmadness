@@ -9,7 +9,7 @@ from PIL import Image
 theme_plotly = None  # None or streamlit
 
 # Layout
-st.set_page_config(page_title='🌌 Model - NCAA_Basketball',
+st.set_page_config(page_title=' Model - NCAA_Basketball',
                    page_icon=':bar_chart:📈', layout='wide')
 st.title('🌌 Optimized Model')
 
@@ -21,12 +21,12 @@ with open('style.css')as f:
 # Data Sources
 @st.cache_data()
 def get_data(query):
-    if query == 'Total_Genre':
-        return pd.read_csv('https://raw.githubusercontent.com/Kaizen-Step/Hollywood_Box_Office_Tragedy/main/Data/Geners/Genre-Total.csv')
-    elif query == 'Number_of_Release':
-        return pd.read_csv('https://raw.githubusercontent.com/Kaizen-Step/Hollywood_Box_Office_Tragedy/main/Data/Geners/Genre-Total2.csv')
-    elif query == 'average_per_release':
-        return pd.read_csv('https://raw.githubusercontent.com/Kaizen-Step/Hollywood_Box_Office_Tragedy/main/Data/Geners/Genre-Total3.csv')
+    # if query == 'Total_Genre':
+    #     return pd.read_csv('https://raw.githubusercontent.com/Kaizen-Step/Hollywood_Box_Office_Tragedy/main/Data/Geners/Genre-Total.csv')
+    # elif query == 'Number_of_Release':
+    #     return pd.read_csv('https://raw.githubusercontent.com/Kaizen-Step/Hollywood_Box_Office_Tragedy/main/Data/Geners/Genre-Total2.csv')
+    # elif query == 'average_per_release':
+    #     return pd.read_csv('https://raw.githubusercontent.com/Kaizen-Step/Hollywood_Box_Office_Tragedy/main/Data/Geners/Genre-Total3.csv')
     return None
 
 
@@ -57,39 +57,59 @@ The process of creating a basketball prediction model involves:
 st.info(""" ##### In This Model Section you can find: ####    
 
  
-    * Model Demonstraion
-    * Training the Model
+    * Model Features
+    * Training The Model With Past Season Data
+    * Use Pretrained Model to Develop More Accurate Model
     * Future Plan
     
     """)
 #################################################################################################
-st.write(""" ### Model Demonstraion ##  """)
+st.write(""" ### Model Features ##  """)
 
 st.write("""
-The neural network used consists of five neurons with a 20 percent dropout rate. Since we have access to a limited amount of data, the model cannot be too deep in order to avoid overfitting. In the following plots, you can see accuracy and loss values during the training process. Both of the training and validation sets converge to satisfactory values. The prediction on the test dataset set showed approximately 75 percent, which sounds acceptable. 
+The five neurons in the neural network that is being used have a 20% dropout rate. As we only have a limited set of data, the model can't be too complex to prevent overfitting. You can observe accuracy and loss values over the course of training in the following charts. The training and validation sets both reach acceptable values. In the test dataset set, the prediction came in at almost 75%, which seems reasonable.
   """)
 
-st.write(""" ### Training the Model ##  """)
+st.write(""" ### Training The Model With Past Season Data ##  """)
+
+st.write("""  
+
+
+This project has made use of the dataset that was obtained through scraping. The dataset has a total of 38 input. A sensitivity analysis and some trial-and-error were used to eliminate some of the columns that were less useful than others. The remaining columns (features) are: "RK1", "Win_Rate1" "offensive rebound rate allowed1," "adjusted offensive efficiency1," "Barthag1," "turnover percentage committed1," "adjusted defensive efficiency1," "RK2," " Win_Rate2," "offensive rebound rate allowed2," "adjusted offensive efficiency2," "Barthag2," "turnover percentage committed2," "adjusted defensive efficiency2", Venue_Home, Venue_Away, and Venue_Neutral.
+Win_Rate1 and Win_Rate2 are representations of the number of victories divided by the total number of games played by each squad.The other characteristics were taken from the Barttorvik website. For a hidden layer and an output layer, respectively, the relu and sigmoid activation functions demonstrated the highest degree of precision.
+  """)
+
+st.info(""" ##### Using a Larger Dataset (two consecutive seasons data) ####    
+
+    In the previous project, only the 2023 regular season dataset was used to train the model; however, in this project the data of the previous season (both regular season and playoff) was used. 
+    Two criteria was used:
+    * Use the 2021-22 data to pre-train the model, then, load the weights as initial values and then train the model again with the current season data
+    * Concatenate all the data and train the model on the larger dataset altogether
+
+    The result showed that the second option works better, therefore, the model is trained by using all the games of the previous and current season as a whole dataset.
+
+    The interesting result is that the accuracy on the test dataset increased by more than half percent by training the model on the larger dataset. The accuracy increased from 76.66 to 77.18 percent. The final accuracy on the test set is just below 80 percent, which looks quite satisfying.
+    
+    """)
+
 
 st.write("""
-The dataset extracted by scraping has been used for this project. There are 44 columns in total in the dataset. Through sensitivity analysis and some trials and errors, several columns that were not as effective as others were removed. The remaining columns (features) are: RK1, Win_Rate1, 2P%1, 2P%D1, 3P%1, 3P%D1, ADJT.1, WAB1, RK2, Win_Rate2, 2P%2, 2P%D2, 3P%2, 3P%D2, ADJT.2, WAB2, Venue_Home, Venue_Away, and Venue_Neutral
-Win_Rate1 and Win_Rate2 are the number of wins divided by the total number of games of each team. The other features are extracted from the
-barttorvik website. The activation function that showed the best accuracy was relu for a hidden layer and sigmoid for an output layer.
+The following charts display the accuracy and loss values while training on both datasets. Please note that since the y axis limit in a bit smaller on the below charts, it seems that it has more flucuations; however, both cases seem to have converged.
   """)
 
 # load
-with open('Data/Prediction/Model History/trainHistoryDict', "rb") as file_pi:
-    history = pickle.load(file_pi)
+with open('Data/Prediction/Model History_only_2022/trainHistoryDict', "rb") as file_pi:
+    history_1 = pickle.load(file_pi)
 
 
 c1, c2 = st.columns(2)
 
 with c1:
     # Plot accuracy
-    st.write(" ### Accuracy")
+    st.write(" ### Accuracy - Trained on 2021-22 Dataset")
     fig = go.Figure()
 
-    for accuracy in [history['accuracy'], history['val_accuracy']]:
+    for accuracy in [history_1['accuracy'], history_1['val_accuracy']]:
         fig = fig.add_trace(go.Scatter(y=accuracy))
 
     fig.update_layout(legend_title=None, xaxis_title='Epoch',
@@ -99,10 +119,44 @@ with c1:
 
 with c2:
     # Plot loss
-    st.write(" ### Loss")
+    st.write(" ### Loss - Trained on 2021-22 Dataset")
     fig = go.Figure()
 
-    for loss in [history['loss'], history['val_loss']]:
+    for loss in [history_1['loss'], history_1['val_loss']]:
+
+        fig = fig.add_trace(go.Scatter(y=loss))
+
+    fig.update_layout(legend_title=None, xaxis_title='Epoch',
+                      yaxis_title='Loss')
+
+    st.plotly_chart(fig)
+
+# load
+with open('Data/Prediction/Model History_concat_data/trainHistoryDict', "rb") as file_pi:
+    history_2 = pickle.load(file_pi)
+
+
+c1, c2 = st.columns(2)
+
+with c1:
+    # Plot accuracy
+    st.write(" ### Accuracy - Trained on the Whole Dataset (2021-22 season and the Regular Season of 2022-23)")
+    fig = go.Figure()
+
+    for accuracy in [history_2['accuracy'], history_2['val_accuracy']]:
+        fig = fig.add_trace(go.Scatter(y=accuracy))
+
+    fig.update_layout(legend_title=None, xaxis_title='Epoch',
+                      yaxis_title='Accuracy')
+
+    st.plotly_chart(fig)
+
+with c2:
+    # Plot loss
+    st.write(" ### Loss - Trained on the Whole Dataset (2021-22 season and the Regular Season of 2022-23)")
+    fig = go.Figure()
+
+    for loss in [history_2['loss'], history_2['val_loss']]:
 
         fig = fig.add_trace(go.Scatter(y=loss))
 
@@ -112,23 +166,29 @@ with c2:
     st.plotly_chart(fig)
 
 
-st.write("""  The loss and accuracy plots of some deeper networks are displayed here. You can see that since there is only a limited amount of data, the model can easily overfit. These plots show the accuracy of the model with 128 neurons in the hidden layer. In the bottom one, a dropout layer with a 20 percent dropout rate has been added. Despite alleviating the overfitting a little bit, it is still overfitting, as there is a significant difference between the training and validation dataset results.In the following picture, you can see the summary of the model.	 """)
+st.write("""  By brute forcing various hyper-parameters for the deep neural model, the best choices are selected. In the charts below, two of the models with the best results are displayed. In both cases the accuracy on the validation set is about 75 percent, but the noticeable problem is that there is a significant difference between the accuracy of the training set and the validation set. Moreover, they do not seem to diverge, and the model, even with a bigger dataset, still can easily overfit with a deeper neural network. So the most promising model would have a single hidden layer that consists of 5 neurons and a dropout rate of 20 percent.	 """)
 
+st.write(" ### Neural Network Model With Two Hidden Layers (n1=128, n2=16, dropout=0.3)")
 c1, c2 = st.columns(2)
 with c1:
-    st.image(Image.open('Images/128 neurons - 1 layer - no drop out.png'), )
+    st.image(Image.open('Images/acc - two layers.png'), )
 with c2:
-
     st.image(Image.open(
-        'Images/128 neurons - 1 layer - with 20 percent drop out.png'), )
+        'Images/loss - two layers.png'), )
+
+
+st.write(" ### Neural Network Model With Three Hidden Layers (n1=64, n2=16, n3=16, dropout=0.3)")
+c1, c2 = st.columns(2)
+with c1:
+    st.image(Image.open('Images/acc - three layers.png'), )
+with c2:
+    st.image(Image.open(
+        'Images/loss - three layers.png'), )
+
 
 #####################################################
 
 st.write(""" ### Future Plan ##  """)
 
 
-st.write("""  In the following picture, you can see the summary of the model.The model used to predict the 34 matches in March Madness 2023 In the future, one of the best choices might be to use the pretrained model from decades and then put new teams and data in the last layer to better predict the match results and data in the last layer to better predict the match result. In our future work, we will use data from decades ago to build a model with higher accuracy. and try different approaches like decision trees and others.""")
-
-c1, c2, c3 = st.columns(3)
-with c2:
-    st.image(Image.open('Images/model_plot.png'), )
+st.write("""  In the future, other results of other models such as linear regression or random forest can be investigated and compared with the current model. In addition, deeper models still can be investigated in more depth, so that a method can be used to prevent model from overfitting, even though there is a lack of data. One solution could be extracting more data from the previous seasons. """)
